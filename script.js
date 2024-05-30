@@ -14,12 +14,12 @@ console.log(add(10, 15));
 
 // reverse(hello);
 
-function reverse(arr) {
-  const reverseArr = arr.reverse()
-  return reverseArr
-}
+// function reverse(arr) {
+//   const reverseArr = arr.reverse();
+//   return reverseArr;
+// }
 
-console.log(reverseArr(carBrands)
+// console.log(reverseArr(carBrands));
 
 //Question 4
 
@@ -129,8 +129,40 @@ console.log(carBrands.some(plus5chars));
 //Filter
 
 function lowerThanM(arr) {
-  return arr < "M";
+  return arr < "m";
 }
 console.log(carBrands.filter(lowerThanM));
 
-console.log();
+//Find
+
+const answer = carBrands.find(findChrysler);
+
+function findChrysler(item) {
+  return item === "chrysler";
+}
+console.log(answer);
+
+//Find in Array
+
+const index = carBrands.findIndex(findIndexChrysler);
+
+function findIndexChrysler(item) {
+  return item === "chrysler";
+}
+console.log(index);
+
+//Sort
+
+carBrands.sort();
+
+console.log(carBrands);
+
+//Map
+
+const convert = carBrands.map(upperCase);
+
+function upperCase(item) {
+  return item.toUpperCase();
+}
+
+console.log(convert);
